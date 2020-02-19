@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/swathisa/semver-test/issues"
   },
-  "homepage": "https://github.com/swathisa/semver-test#readme"
+  "homepage": "https://github.com/swathisa/semver-test#readme",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github",
+    ["@semantic-release/exec", {
+      "publishCmd" : "git push origin --tags"
+      }]
+  ]
 }
