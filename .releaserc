@@ -25,6 +25,7 @@
     "@semantic-release/release-notes-generator",
     "@semantic-release/github",
     ["@semantic-release/exec", {
+      "prepareCmd" : "echo ${nextRelease.version} > version.txt",
       "publishCmd" : "git push origin --tags"
       }]
   ]
