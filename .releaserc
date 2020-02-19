@@ -23,10 +23,13 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
-    "@semantic-release/github",
     ["@semantic-release/exec", {
-      "prepareCmd" : "echo ${nextRelease.version} > version.txt",
-      "publishCmd" : "git push origin --tags"
-      }]
+      "prepareCmd" : "echo ${nextRelease.version} > version.txt"
+      }],
+    ["@semantic-release/github", {
+      "assets": [
+        {"path": "version.txt", "label": "Project Version"}
+      ]
+    }]
   ]
 }
