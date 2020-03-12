@@ -1,1 +1,1 @@
-# semver-test
+# semver-test using Semantic Release
